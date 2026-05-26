@@ -1,0 +1,7 @@
+프로그램 실행 방법:
+
+1. up_down_case() 함수를 my_header.h 파일에 작성하고 저장한다.
+2. main.c와 my_header.h를 같은 폴더에 저장한다.
+3. main.c에서 #include "my_header.h" 로 헤더파일을 포함시킨다.
+4. gcc main.c -o program7 으로 컴파일한다.
+5. ./program7 으로 실행한다.

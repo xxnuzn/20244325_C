@@ -1,0 +1,29 @@
+실행결과:
+program1: 10
+program2: 10 (단, main 위에 전방선언 필요 - 컴파일러에 따라 오류 가능)
+program3: 10
+program4: 10
+program5: 10
+program6: 6
+
+알게된 내용:
+
+[program 1과 program 2를 통해]
+전역변수는 파일 어디서든 접근 가능하다.
+단 선언 전에 사용하면 컴파일 오류가 날 수 있다.
+
+[program 3과 program 4를 통해]
+extern 키워드를 쓰면 다른 파일에 있는 전역변수를 참조할 수 있다.
+컴파일 할 때 두 파일을 같이 컴파일해야 한다. (gcc program3_main.c program3_var.c -o p3)
+
+[program 5와 program 6을 통해]
+초기값 없이 전역변수 선언하면 자동으로 0으로 초기화된다.
+program6에서 지역변수 a=6이 전역변수 a=10을 가려서 6이 출력된다.
+
+[program 1,2와 program 3,4를 통해]
+같은 파일이면 extern 없이도 전역변수 사용 가능하다.
+다른 파일에 있으면 extern으로 선언해야 사용 가능하다.
+
+[외부변수와 extern 변수의 쓰임새]
+extern은 변수를 새로 만드는게 아니라 이미 다른 곳에 있는 변수를 참조하는 선언이다.
+전역변수를 여러 파일에서 공유할 때 사용한다.
